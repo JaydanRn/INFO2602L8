@@ -50,7 +50,7 @@ async function loadView() {
 
 loadView();
 
-async function createTodo(event) {
+async function createTodo(event){
   event.preventDefault();//stop the form from reloading the page
   let form = event.target.elements;//get the form from the event object
 
@@ -61,17 +61,22 @@ async function createTodo(event) {
 
   event.target.reset();//reset form
 
-  let result = await sendRequest(`${server}/todos`, 'POST', data);
+  let result = await sendRequest(`${server}/todo`, 'POST', data);
 
-  if ('error' in result) {
+  if('error' in result){
     toast('Error: Not Logged In');
-  } else {
+  }else{
     toast('Todo Created!');
   }
-
+    
   loadView();
-
 }
+
+//attach createTodo() to the submit event of the form
+document.forms['addForm'].addEventListener('submit', createTodo);
+
+//attach createTodo() to the submit event of the form
+document.forms['addForm'].addEventListener('submit', createTodo);
 
 //attach createTodo() to the submit event of the form
 document.forms['addForm'].addEventListener('submit', createTodo);
