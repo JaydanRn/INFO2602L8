@@ -1,5 +1,5 @@
 // replace with your fork of the completed lab 3 repl https://replit.com/@Snickdx/INFO-2602-Lab-3-Completed
-const server = "https://github.com/JaydanRn/info2602-fastapi-l6.git";
+const server = "https://localhost:8000";
 
 function toast(message){
   M.toast({html: message});
