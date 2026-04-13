@@ -75,12 +75,6 @@ async function createTodo(event){
 //attach createTodo() to the submit event of the form
 document.forms['addForm'].addEventListener('submit', createTodo);
 
-//attach createTodo() to the submit event of the form
-document.forms['addForm'].addEventListener('submit', createTodo);
-
-//attach createTodo() to the submit event of the form
-document.forms['addForm'].addEventListener('submit', createTodo);
-
 async function toggleDone(event) {
   let checkbox = event.target;
   let id = checkbox.dataset['id'];//get id from data attribute
